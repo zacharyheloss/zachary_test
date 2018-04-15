@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="lib"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="D:/uce/repository/org/apache/commons/commons-lang3/3.2.1/commons-lang3-3.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/uce/repository/commons-codec/commons-codec/1.5/commons-codec-1.5.jar"/>
+	<classpathentry kind="lib" path="D:/uce/repository/com/google/code/gson/gson/2.6.1/gson-2.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/uce/repository/com/alibaba/fastjson/1.2.31/fastjson-1.2.31.jar"/>
+	<classpathentry kind="lib" path="D:/uce/repository/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="D:/uce/repository/cglib/cglib/2.2.2/cglib-2.2.2.jar"/>
+	<classpathentry kind="lib" path="D:/uce/repository/org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar"/>
+	<classpathentry kind="lib" path="D:/uce/repository/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/netty-3.10.5.Final-sources.jar"/>
+	<classpathentry kind="lib" path="lib/netty-3.10.5.Final.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
