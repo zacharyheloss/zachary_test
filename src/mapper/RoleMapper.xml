@@ -10,6 +10,7 @@
     <result column="remark" property="remark" jdbcType="VARCHAR" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
