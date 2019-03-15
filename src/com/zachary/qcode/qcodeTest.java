@@ -11,11 +11,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-
 import com.alibaba.fastjson.JSONObject;
 import com.zachary.qcode.QcodeConstant.Qcode;
 
 /**
+ * @多线程生成二维码 Future
+ * 截取List
  * @author zhang/7_8
  *         IBFQBZDEeZakBJFq_IYDwAGoPuO9vf0WFAt2LU0n9igyPixxSa91InSL_voXlAPaRrLwZitC0eWC04_DLCB_6z0kDT5L3d1u6pZwcV6zo
  *         -nTH1jYYjcdDeX0AoQWCgADATZF {"ticket":
@@ -68,8 +69,11 @@ public class qcodeTest {
 				Future<String> future= executorService.submit(new Task(tempMapList));
 				futureTaskList.add(future);
 			}
+			for(Future<String> futureTask:futureTaskList){
+				String qcode=futureTask.get();
+				System.out.println(qcode);
+			}
 			executorService.shutdown();
-			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
