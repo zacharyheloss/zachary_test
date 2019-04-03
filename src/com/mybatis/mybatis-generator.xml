@@ -21,7 +21,7 @@
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
-		<javaModelGenerator targetPackage="cn.uce.wx.pc.entity"
+		<javaModelGenerator targetPackage="com.zachary.com.entity"
 			targetProject="src">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
@@ -30,7 +30,7 @@
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="cn.uce.cuwb2.dao" targetProject="src">
+			targetPackage="com.zachary.cuwb2.dao" targetProject="src">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
