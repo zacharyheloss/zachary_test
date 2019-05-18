@@ -15,13 +15,13 @@
             <property name="dateFormat" value="yyyy-MM-dd HH:mm:ss" />
 		</commentGenerator>
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://10.201.1.91:3306/wx" userId="root"
-			password="Uc2017!@#">
+			connectionURL="jdbc:mysql://127.0.0.1:3306/zachart" userId="root"
+			password="111111">
 		</jdbcConnection>
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
-		<javaModelGenerator targetPackage="cn.uce.wx.pc.entity"
+		<javaModelGenerator targetPackage="com.zachary.com.entity"
 			targetProject="src">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
@@ -30,43 +30,12 @@
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="cn.uce.wx.pc.dao" targetProject="src">
+			targetPackage="com.zachary.cuwb2.dao" targetProject="src">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-		<table tableName="wx_user" domainObjectName="User"
-			enableCountByExample="true" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="true"
-			selectByExampleQueryId="false"></table>
-		<table tableName="wx_role" domainObjectName="Role"
-			enableCountByExample="true" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="true"
-			selectByExampleQueryId="false"></table>
-		<!-- <table tableName="wx_user_relation_role" domainObjectName="UserRelationRole"
-			enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="true"
-			selectByExampleQueryId="false"></table> -->
-		<table tableName="wx_usergroup" domainObjectName="Usergroup"
-			enableCountByExample="true" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="true"
-			selectByExampleQueryId="false"></table>
-		<table tableName="wx_usergroup_relation" domainObjectName="UsergroupRelation"
-			enableCountByExample="true" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="true"
-			selectByExampleQueryId="false"></table>
-		<table tableName="wx_role_relation_resource" domainObjectName="RoleRelationResource"
-			enableCountByExample="true" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="true"
-			selectByExampleQueryId="false"></table>
-		<table tableName="wx_group_relation_role" domainObjectName="GroupRelationRole"
-			enableCountByExample="true" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="true"
-			selectByExampleQueryId="false"></table>
-		<table tableName="wx_resource" domainObjectName="Resource"
-			enableCountByExample="true" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="true"
-			selectByExampleQueryId="false"></table>
-		<table tableName="wx_role_relation_resource" domainObjectName="RoleRelationResource"
+		
+		<table tableName="bbs" domainObjectName="RoleRelationResource"
 			enableCountByExample="true" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="true"
 			selectByExampleQueryId="false"></table>
