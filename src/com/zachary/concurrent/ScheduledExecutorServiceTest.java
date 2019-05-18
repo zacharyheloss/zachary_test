@@ -1,8 +1,4 @@
-/**
- * @Title: 用来发送短信验证码
- * @author zhangcheng
- * @version V1.0
- */
+
 package com.zachary.concurrent;
 
 import java.text.SimpleDateFormat;
@@ -13,58 +9,59 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Title: 用来发送短信验证码
- * @author zhangcheng
- * @version V1.0
- */
+* @Description: 线程池定时任务
+* @Author: zachary
+* @Date: 2019-05-18 14:45
+*/
 public class ScheduledExecutorServiceTest {
 
-	
-	public static void main(String[] args) throws Exception {
-		ScheduledExecutorService timer = Executors.newScheduledThreadPool(5, new ThreadFactory() {
-			int index = 0;
-			@Override
-			public Thread newThread(Runnable r) {
-				index++;
-				return new Thread(r,"zachary"+index);
-			}
-		});
 
-		TimerTask timerTask = new TimerTask(4000); // 任务需要 2000 ms 才能执行完毕
+    public static void main(String[] args) throws Exception {
+        ScheduledExecutorService timer = Executors.newScheduledThreadPool(5, new ThreadFactory() {
+            int index = 0;
 
-		System.out.printf("起始时间：%s\n\n",
-				new SimpleDateFormat("HH:mm:ss").format(new Date()));
+            @Override
+            public Thread newThread(Runnable r) {
+                index++;
+                return new Thread(r, "zachary" + index);
+            }
+        });
 
-		// 延时 1 秒后，按 3 秒的周期执行任务
-		timer.scheduleAtFixedRate(timerTask, 1000, 2000, TimeUnit.MILLISECONDS);
-	}
+        TimerTask timerTask = new TimerTask(4000); // 任务需要 2000 ms 才能执行完毕
 
-	private static class TimerTask implements Runnable {
+        System.out.printf("起始时间：%s\n\n",
+                new SimpleDateFormat("HH:mm:ss").format(new Date()));
 
-		private final int sleepTime;
-		private final SimpleDateFormat dateFormat;
+        // 延时 1 秒后，按 3 秒的周期执行任务
+        timer.scheduleAtFixedRate(timerTask, 1000, 2000, TimeUnit.MILLISECONDS);
+    }
 
-		public TimerTask(int sleepTime) {
-			this.sleepTime = sleepTime;
-			dateFormat = new SimpleDateFormat("HH:mm:ss");
-		}
+    private static class TimerTask implements Runnable {
 
-		@Override
-		public void run() {
-			
-			System.out.println(Thread.currentThread().getName()+"_"+Thread.currentThread().getId()+" 任务开始，当前时间：" + dateFormat.format(new Date()));
+        private final int sleepTime;
+        private final SimpleDateFormat dateFormat;
 
-			try {
-				System.out.println("模拟任务运行...");
-				Thread.sleep(sleepTime);
-			} catch (InterruptedException ex) {
-				ex.printStackTrace(System.err);
-			}
+        public TimerTask(int sleepTime) {
+            this.sleepTime = sleepTime;
+            dateFormat = new SimpleDateFormat("HH:mm:ss");
+        }
 
-			System.out.println("任务结束，当前时间：" + dateFormat.format(new Date()));
-			System.out.println();
-		}
+        @Override
+        public void run() {
 
-	}
+            System.out.println(Thread.currentThread().getName() + "_" + Thread.currentThread().getId() + " 任务开始，当前时间：" + dateFormat.format(new Date()));
+
+            try {
+                System.out.println("模拟任务运行...");
+                Thread.sleep(sleepTime);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace(System.err);
+            }
+
+            System.out.println("任务结束，当前时间：" + dateFormat.format(new Date()));
+            System.out.println();
+        }
+
+    }
 
 }

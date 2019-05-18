@@ -1,8 +1,3 @@
-/**
-* @Title: 用来发送短信验证码
-* @author zhangcheng
-* @version V1.0
-*/
 package com.zachary.concurrent;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -10,10 +5,10 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @Title: 用来发送短信验证码
- * @author zhangcheng
- * @version V1.0
- */
+* @Description: 高并发关键字
+* @Author: zachary
+* @Date: 2019-05-18 14:46
+*/
 public class VoliteTest {
 public  int inc = 0;
     
